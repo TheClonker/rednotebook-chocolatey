@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>rednotebook</id>
+    <version>2.3</version>
+    <packageSourceUrl>https://github.com/TheClonker/rednotebook-chocolatey</packageSourceUrl>
+    <owners>TheClonker</owners>
+    <!-- ============================== -->
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>Red Notebook</title>
+    <authors>Jendrik Seipp</authors>
+    <projectUrl>http://rednotebook.sourceforge.net</projectUrl>
+    <iconUrl>http://cdn.rawgit.com/jendrikseipp/rednotebook/master/rednotebook/images/rednotebook-icon/rn-256.png</iconUrl>
+    <licenseUrl>https://github.com/jendrikseipp/rednotebook/blob/master/LICENSE</licenseUrl>
+    <projectSourceUrl>https://github.com/jendrikseipp/rednotebook</projectSourceUrl>
+    <docsUrl>https://answers.launchpad.net/rednotebook/+faqs</docsUrl>
+    <mailingListUrl>https://launchpad.net/~rednotebook-users</mailingListUrl>
+    <bugTrackerUrl>https://github.com/jendrikseipp/rednotebook/issues</bugTrackerUrl>
+    <tags>rednotebook diary journal</tags>
+    <summary>A cross-platform diary and journal</summary>
+    <description>RedNotebook is a modern journal
+
+  It lets you format, tag and search your entries. You can also add pictures, links and customizable templates, spell check your notes, and export to plain text, HTML, Latex or PDF. RedNotebook is Free Software under the GPL.
+
+
+  **Please Note**: This is an automatically updated package. If you find it is
+  out of date by more than a day or two, please contact the maintainer(s) and
+  let them know the package is no longer updating correctly.
+    </description>
+  <!-- =============================== -->
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
