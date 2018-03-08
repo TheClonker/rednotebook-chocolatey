@@ -3,7 +3,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>rednotebook</id>
-    <version>2.3</version>
+    <version>2.4</version>
     <packageSourceUrl>https://github.com/TheClonker/rednotebook-chocolatey</packageSourceUrl>
     <owners>TheClonker</owners>
     <!-- ============================== -->
@@ -20,13 +20,7 @@
     <tags>rednotebook diary journal</tags>
     <summary>A cross-platform diary and journal</summary>
     <description>RedNotebook is a modern journal
-
-  It lets you format, tag and search your entries. You can also add pictures, links and customizable templates, spell check your notes, and export to plain text, HTML, Latex or PDF. RedNotebook is Free Software under the GPL.
-
-
-  **Please Note**: This is an automatically updated package. If you find it is
-  out of date by more than a day or two, please contact the maintainer(s) and
-  let them know the package is no longer updating correctly.
+	It lets you format, tag and search your entries. You can also add pictures, links and customizable templates, spell check your notes, and export to plain text, HTML, Latex or PDF. RedNotebook is Free Software under the GPL.
     </description>
   <!-- =============================== -->
   </metadata>
