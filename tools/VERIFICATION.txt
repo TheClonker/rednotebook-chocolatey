@@ -1,6 +1,0 @@
-VERIFICATION
-Verification is intended to assist the Chocolatey moderators and community
-in verifying that this package's contents are trustworthy.
-
-Sadly the Author does not provide Checksums for his Releases so the only way is to download the Setup yourself and and compare the Checksum in the Install Script.
-I made an Issue on the Projects Github to get official Checksums for each Release https://github.com/jendrikseipp/rednotebook/issues/381
