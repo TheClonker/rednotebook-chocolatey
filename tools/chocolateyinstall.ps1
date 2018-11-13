@@ -1,13 +1,13 @@
 ﻿$ErrorActionPreference = 'Stop';
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url        = 'https://github.com/jendrikseipp/rednotebook/releases/download/v2.7/rednotebook-2.7.exe'
+$url        = 'https://github.com/jendrikseipp/rednotebook/releases/download/v2.7.1/rednotebook-2.7.1.exe'
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
   unzipLocation = $toolsDir
   fileType      = 'exe'
   url           = $url
   softwareName  = 'RedNotebook*'
-  checksum      = 'C5602612516422E4AA5B95959582BF997623A9BBDCA7ED685AB6C977D639A370'
+  checksum      = '3A16BAAAE4F577AE5351F50C9DE0EE2146FE909D5D47B79EAF90214FEEBE252C'
   checksumType  = 'sha256'
   silentArgs   = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-' # Inno Setup
   validExitCodes= @(0)
