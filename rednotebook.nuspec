@@ -22,6 +22,7 @@
     <description>RedNotebook is a modern journal
 	It lets you format, tag and search your entries. You can also add pictures, links and customizable templates, spell check your notes, and export to plain text, HTML, Latex or PDF. RedNotebook is Free Software under the GPL.
     </description>
+    <releaseNotes>%%RELEASENOTES%%</releaseNotes>
   <!-- =============================== -->
   </metadata>
   <files>
