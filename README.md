@@ -8,3 +8,7 @@ I am also thinking about automating the cycle but I don't know in which language
 Project Url: http://rednotebook.sourceforge.net  
 Project Github: https://github.com/jendrikseipp/rednotebook  
 Chocolatey Link: https://chocolatey.org/packages/rednotebook/
+
+## Build in Docker
+
+`docker build . --build-arg CHOCO_API_KEY=abcdef... --build-arg CHOCO_PACKAGE_NAME=rednotebook.x.yz.nupkg`
