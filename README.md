@@ -1,14 +1,16 @@
 # Chocolatey Package for Red Notebook
 
-This is my first Chocolatey Package so feel free to comment or criticize.  
-I will tryout the GitHub Releases and add the final .nupkg file there!
+This is my first Chocolatey Package so feel free to comment or criticize.
 
-I am also thinking about automating the cycle but I don't know in which language yet, probably Python.
-
-Project Url: http://rednotebook.sourceforge.net  
-Project Github: https://github.com/jendrikseipp/rednotebook  
+Project Url: http://rednotebook.sourceforge.net
+Project Github: https://github.com/jendrikseipp/rednotebook
 Chocolatey Link: https://chocolatey.org/packages/rednotebook/
 
-## Build in Docker
+Run `./build-and.push.sh`
 
-`docker build . --build-arg CHOCO_API_KEY=abcdef... --build-arg CHOCO_PACKAGE_NAME=rednotebook.x.yz.nupkg`
+Needed Variables:
+
+* VERSION: Version String from GitHub Release
+* URL: Download URL from GitHub Release
+* RELEASENOTES: Release Notes from GitHub Release
+* CHOCO_API_KEY: API Key to Push Chocolatey Package

@@ -1,0 +1,9 @@
+image: chocolatey/choco
+
+build-and-push:
+  stage: build
+  script:
+    - ./build-and-push.sh
+  artifacts:
+    paths:
+      - *.nupkg
