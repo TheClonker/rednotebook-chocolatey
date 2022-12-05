@@ -1,9 +1,10 @@
 image: chocolatey/choco
 
 build-and-push:
+  interruptible: true
   stage: build
   script:
     - ./build-and-push.sh
   artifacts:
     paths:
-      - *.nupkg
+      - "*.nupkg"
