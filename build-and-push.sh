@@ -10,15 +10,15 @@ curl --location $URL --silent --output tmpfile
 CHECKSUM=$(sha256sum tmpfile | awk '{print $1}')
 rm tmpfile
 
-echo "Version: $VERSION"
-echo "URL: $URL"
-echo "Checksum: $CHECKSUM"
-echo "Release Notes: $RELEASENOTES"
 
 # Replace Variables
+echo "Version: $VERSION"
 sed -i "s/%%VERSION%%/$VERSION/" rednotebook.nuspec
+echo "Release Notes:\n$RELEASENOTES"
 sed -i "s/%%RELEASENOTES%%/Release Notes:\n$RELEASENOTES/" rednotebook.nuspec
+echo "URL: $URL"
 sed -i "s~%%URL%%~$URL~" tools/chocolateyinstall.ps1
+echo "Checksum: $CHECKSUM"
 sed -i "s/%%CHECKSUM%%/$CHECKSUM/" tools/chocolateyinstall.ps1
 
 # Build the .nupkg File
