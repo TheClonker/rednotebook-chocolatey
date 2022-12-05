@@ -1,9 +1,10 @@
 image: chocolatey/choco
 
 build-and-push:
-  when: manual
   interruptible: true
   stage: build
+  rules:
+    - if: $CI_PIPELINE_TRIGGERED
   script:
     - ./build-and-push.sh
   artifacts:
