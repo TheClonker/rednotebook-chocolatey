@@ -10,12 +10,13 @@ curl --location $URL --silent --output tmpfile
 CHECKSUM=$(sha256sum tmpfile | awk '{print $1}')
 rm tmpfile
 
-
 # Replace Variables
 echo "Version: $VERSION"
 sed -i "s/%%VERSION%%/$VERSION/" rednotebook.nuspec
-echo "Release Notes:\n$RELEASENOTES"
-sed -i "s/%%RELEASENOTES%%/Release Notes:\n$RELEASENOTES/" rednotebook.nuspec
+echo "Release Notes:"
+echo "$RELEASENOTES"
+# Perl is easier for multiline than sed
+perl -0777 -i -pe "s/%%RELEASENOTES%%/Release Notes:\n$RELEASENOTES/" rednotebook.nuspec
 echo "URL: $URL"
 sed -i "s~%%URL%%~$URL~" tools/chocolateyinstall.ps1
 echo "Checksum: $CHECKSUM"
@@ -26,5 +27,4 @@ choco pack
 
 # Set API Key and Push
 choco apikey -k $CHOCO_API_KEY -source https://push.chocolatey.org/
-#choco push *.nupkg -s https://push.chocolatey.org/
-ls -la
+choco push *.nupkg -s https://push.chocolatey.org/
