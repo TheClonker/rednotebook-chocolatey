@@ -1,6 +1,7 @@
 image: chocolatey/choco
 
 build-and-push:
+  when: manual
   interruptible: true
   stage: build
   script:
