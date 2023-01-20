@@ -15,6 +15,9 @@ echo "Version: $VERSION"
 sed -i "s/%%VERSION%%/$VERSION/" rednotebook.nuspec
 echo "Release Notes:"
 echo "$RELEASENOTES"
+# Replace < and >
+RELEASENOTES="${RELEASENOTES//</&lt;}"
+RELEASENOTES="${RELEASENOTES//>/&gt;}"
 # Perl is easier for multiline than sed, supposedly
 perl -0777 -i -pe "s|%%RELEASENOTES%%|Release Notes:\n$RELEASENOTES|" rednotebook.nuspec
 echo "URL: $URL"
