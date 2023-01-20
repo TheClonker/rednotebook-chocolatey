@@ -15,8 +15,8 @@ echo "Version: $VERSION"
 sed -i "s/%%VERSION%%/$VERSION/" rednotebook.nuspec
 echo "Release Notes:"
 echo "$RELEASENOTES"
-# Perl is easier for multiline than sed
-perl -0777 -i -pe "s/%%RELEASENOTES%%/Release Notes:\n$RELEASENOTES/" rednotebook.nuspec
+# Perl is easier for multiline than sed, supposedly
+perl -0777 -i -pe "s|%%RELEASENOTES%%|Release Notes:\n$RELEASENOTES|" rednotebook.nuspec
 echo "URL: $URL"
 sed -i "s~%%URL%%~$URL~" tools/chocolateyinstall.ps1
 echo "Checksum: $CHECKSUM"
