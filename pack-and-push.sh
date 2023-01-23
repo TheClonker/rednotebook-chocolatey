@@ -6,4 +6,4 @@ choco pack
 
 # Set API Key and Push
 choco apikey -k $CHOCO_API_KEY -source https://push.chocolatey.org/
-#choco push *.nupkg -s https://push.chocolatey.org/
+choco push *.nupkg -s https://push.chocolatey.org/
