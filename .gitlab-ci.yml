@@ -1,12 +1,31 @@
-image: chocolatey/choco
+stages:
+  - build
+  - publish
 
-build-and-push:
-  interruptible: true
+
+validate-and-prepare:
+  image: python
   stage: build
+  interruptible: true
   rules:
     - if: $CI_PIPELINE_TRIGGERED
   script:
-    - ./build-and-push.sh
+    - ./validate-and-prepare.py
+  artifacts:
+    paths:
+      - "tools/chocolateyinstall.ps1"
+      - "rednotebook.nuspec"
+
+pack-and-push:
+  image: chocolatey/choco
+  stage: publish
+  dependencies:
+    - validate-and-prepare
+  interruptible: true
+  rules:
+    - if: $CI_PIPELINE_TRIGGERED
+  script:
+    - ./pack-and-push.sh
   artifacts:
     paths:
       - "*.nupkg"
